@@ -1,0 +1,47 @@
+<div class="card">
+    <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                aria-controls="collapseTwo">
+                Academic Information
+            </button>
+        </h5>
+    </div>
+    <div id="collapseTwo" class="card-body collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        <form>
+            <div class="row gx-3 mb-3">
+                <!-- Form Group (Marks)-->
+                <div class="col-md-6">
+                    <label class="small mb-1" for="ssc">SSC Marks (%)</label>
+                    <input class="form-control" id="ssc" type="number" name="ssc"
+                        placeholder="Enter Your SSC Percentile" required>
+                </div>
+                <!-- Form Group (location)-->
+                <div class="col-md-6">
+                    <label class="small mb-1" for="hsc">HSC / Diploma Marks (%)</label>
+                    <input class="form-control" id="hsc" class="hsc" type="number"
+                        placeholder="Enter Your HSC/Diploma Percentile" required>
+                </div>
+            </div>
+            <!-- Form Group (name)-->
+            <div class="mb-3">
+                <label class="small mb-1" for="academic">Other Acadamic Achievements</label>
+                <input class="form-control" name="academic" id="academic" type="text"
+                    placeholder="Your Academic Achievements">
+            </div>
+            <!-- Form Group (reg No.)-->
+            <div class="mb-3">
+                <label class="small mb-1" for="curricular">Extra Curricular Achievements</label>
+                <input class="form-control" name="curricular" id="curricular" type="text"
+                    placeholder="Extra Curricular Achievements">
+            </div>
+            <div class="mb-3">
+                <label class="small mb-1" for="specialInfo">SPECIAL INFORMATION</label>
+                <input class="form-control" name="specialInfo" id="specialInfo" type="text"
+                    placeholder="Any Special Information">
+            </div>
+            <!-- Save changes button-->
+            <button class="btn btn-primary" type="submit">Save changes</button>
+        </form>
+    </div>
+</div>

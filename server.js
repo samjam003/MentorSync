@@ -3,12 +3,19 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const express = require("express");
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
+const path = require('path');
+
 const app = express();
 const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const indexRouter = require('./routes/index');
 const loginRouter = require('./routes/login');
+const dashboardRouter = require('./routes/dashboard');
+const authRouter = require('./routes/auth');
+const menteeRouter = require('./routes/mentee');
 
 
 
@@ -18,6 +25,7 @@ app.set('views', __dirname + '/views');
 
 // Set default layout
 app.set('layout', 'layouts/layout');
+app.set('dashLayout', 'dashboard/index');
 
 // Use express-ejs-layouts
 app.use(expressLayouts);
@@ -29,6 +37,16 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: false }));
 
 
+// Session middleware
+app.use(session({
+    secret: 'admin',
+    resave: false,
+    saveUninitialized: false,
+    store: MongoStore.create({ 
+        mongoUrl: process.env.DATABASE_URL, // Replace with your MongoDB connection string
+        ttl: 24 * 60 * 60 // Session TTL (optional)
+    })
+}));
 
 //add the manifest
 app.get("/manifest.json", function(req, res){
@@ -55,19 +73,26 @@ app.get("/manifest.json", function(req, res){
   });
 
 
-// // Connect to MongoDB
-// mongoose.connect(process.env.DATABASE_URL, {
-//     useNewUrlParser: true
-// });
-// const db = mongoose.connection;
-// db.on('error', error => console.error(error));
-// db.once('open', () => console.log("Connected to MongoDB"));
+ //Connect to MongoDB
+ mongoose.connect(process.env.DATABASE_URL, {
+    useNewUrlParser: true
+});
+const db = mongoose.connection;
+db.on('error', error => console.error(error));
+db.once('open', () => console.log("Connected to MongoDB"));
 
 // Routes
 app.use('/', indexRouter);
 app.use('/login', loginRouter);
+app.use('/auth', authRouter); 
+app.use('/mentee', menteeRouter);
 
-
+// Routes
+app.use('/', indexRouter);
+app.use('/dashboard', (req, res, next) => {
+    res.locals.layout = 'dashboard/index'; // Set dashLayout for dashboard route
+    next();
+}, dashboardRouter);
 
 // Middleware to set layout for routes using 'redirect-layout'
 app.use(function(req, res, next) {

@@ -3,11 +3,11 @@ const router = express.Router();
 
 
 router.get('/mentorLogin',(req,res)=>{
-    res.render("login/mentorLogin")
+    res.render("login/mentorLogin",{header:true})
 })
     
 router.get('/adminlogin',(req,res)=>{
-        res.render("login/adminLogin")
+        res.render("login/adminLogin",{header:true})
 
 })
 

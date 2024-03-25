@@ -3,7 +3,7 @@ const router = express.Router();
 
 
 router.get('/',(req,res)=>{
-    res.render("index")
+    res.render("index",{header:true})
 })
     
 router.get('/index',(req,res)=>{

@@ -1,24 +1,50 @@
-<main class=" bg-dark">
-    <div class=" container col-xxl-10 px-8 ">
-        <div class=" row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="bg-white">
-                <h1>This is login page for Mentor</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eum consectetur rerum ut similique
-                    totam
-                    iusto, blanditiis temporibus unde veniam officia recusandae non quia numquam perspiciatis ipsa
-                    quidem
-                    quos corrupti?</p>
-                <form class="form">
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label ">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label ">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
+<!--  Body Wrapper -->
+<div class="d-flex align-items-center justify-content-center w-100">
+    <div class="row justify-content-center w-100">
+        <div class="col-md-8 col-lg-6 col-xxl-6">
+            <div class="card mb-0 border-warning border-3 ">
+                <div class="card-body">
+                    <a href="./index.html" class="text-nowrap logo-img text-center d-block py-3 w-100">
+                        <img src="/asset/img/icons8-mentor-64.png" width="50" alt="">
+                    </a>
+                    <h1 class="display-7 fw-bold lh-1 mb-6 text-warning" style="font-family:anta ;text-align:center;">
+                        Mentor Login</h1>
+                    <br>
+                    <form action="/auth/mentorLogin" method="post">
+                        <div class="mb-3">
+                            <label for="email" class="form-label text-warning">Email</label>
+                            <input type="email" class="form-control" name="email" id="email"
+                                placeholder="Enter Your Email" aria-describedby="emailHelp" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="password class=" form-label text-warning">Password</label>
+                            <input type="password" placeholder="Enter Your Password" name="password" id="password"
+                                class=" form-control" required>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input warning" type="checkbox" value="" id="flexCheckChecked"
+                                    checked>
+                                <label class="form-check-label text-dark" for="flexCheckChecked">
+                                    Remeber this Device
+                                </label>
+                            </div>
+                            <a class="text-warning fw-bold" href="#">Forgot Password ?</a>
+                        </div>
+                        <button href="/auth/mentorLogin" class="btn btn-warning w-100 py-8 fs-4 mb-4 rounded-2">Sign
+                            In</button>
+                        <!--<div class="d-flex align-items-center justify-content-center">
+                            <p class="fs-4 mb-0 fw-bold">New to Modernize?</p>
+                            <a class="text-primary fw-bold ms-2" href="./authentication-register.html">Create an
+                                account</a>-->
+                </div>
                 </form>
             </div>
         </div>
     </div>
-</main>
+</div>
+</div>
+</div>
+</div>
+<script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
