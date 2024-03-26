@@ -1,0 +1,62 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3" id="headingOne">
+        <h5 class="mb-2"><button class="btn btn-link " data-toggle="collapse" data-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">Academic
+                Progress Details </button></h5>
+    </div>
+    <div id="collapseOne" class="card-body collapse show " aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="table-responsive">
+            <table class="table table-bordered mobile-table" id="dataTable" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Sem</th>
+                        <th>Status</th>
+                        <th>Pointer</th>
+                        <th>Month/Year of Passing</th>
+                        <th>Remark</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SEM 1 </td>
+                        <td contenteditable="true">clear </td>
+                        <td contenteditable="true">8.22 </td>
+                        <td contenteditable="true">2021 </td>
+                        <td contenteditable="true">Excellent </td>
+                    </tr>
+                    <tr>
+                        <td>SEM 2 </td>
+                        <td contenteditable="true">1 KT </td>
+                        <td contenteditable="true">7.29 </td>
+                        <td contenteditable="true">2021 </td>
+                        <td contenteditable="true">Excellent </td>
+                    </tr>
+                    <tr>
+                        <td>SEM 3 </td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                    </tr>
+                    <tr>
+                        <td>SEM 4 </td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    new DataTable('#dataTable', {
+        responsive: true
+    });
+
+
+    $('#accordion').on('show.bs.collapse', function (e) {
+        $('#accordion .collapse.show').not(e.target).collapse('hide');
+    });
+</script>

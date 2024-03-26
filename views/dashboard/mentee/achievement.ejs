@@ -1,0 +1,62 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3" id="headingTwo">
+        <h5 class="mb-2"><button class="btn btn-link " data-toggle="collapse" data-target="#collapseTwo"
+                aria-expanded="false" aria-controls="collapseTwo">Other Academic Achievements / Extra
+                Curricular Achievements</button></h5>
+    </div>
+    <div id="collapseTwo" class="card-body collapse " aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="table-responsive">
+            <table class="table table-bordered mobile-table" id="T2" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Sem</th>
+                        <th>Academic / Extracurricular</th>
+                        <th>Level</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td contenteditable="true">I </td>
+                        <td contenteditable="true">Hackathon</td>
+                        <td contenteditable="true">National Level</td>
+                        <td contenteditable="true">jdshfsdjfhkjdsfhjkdshfjsdkf</td>
+                    </tr>
+                    <tr>
+                        <td>2 </td>
+                        <td contenteditable="true">II </td>
+                        <td contenteditable="true">GSOC</td>
+                        <td contenteditable="true">International Level </td>
+                        <td contenteditable="true">hzjhjzhjfhjkzhfzjhf </td>
+                    </tr>
+                    <tr>
+                        <td>3 </td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    new DataTablme('#new', {
+        responsive: true
+    });
+
+
+    $('#accordion').on('show.bs.collapse', function (e) {
+        $('#accordion .collapse.show').not(e.target).collapse('hide');
+    });
+</script>

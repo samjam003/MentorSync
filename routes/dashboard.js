@@ -43,7 +43,7 @@ router.get('/mentee',(req,res)=>{
     res.render("dashboard/mentee/index",{header:false, session : 'mentee'})
 })
 router.get('/page2',(req,res)=>{
-    res.render("dashboard/mentee/billing",{header:false, session : 'mentee'})
+    res.render("dashboard/mentee/progress",{header:false, session : 'mentee'})
 })
 router.get('/page3',(req,res)=>{
     res.render("dashboard/mentee/security",{header:false, session : 'mentee'})

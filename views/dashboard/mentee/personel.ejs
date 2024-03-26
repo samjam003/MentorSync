@@ -3,125 +3,127 @@
         background-color: rgb(160, 160, 160);
     }
 </style>
-<div class="card">
-    <div class="card-header .grey " id="headingOne">
-        <h5 class="mb-2">
-            <button class="btn btn-link " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-                aria-controls="collapseOne">
-                Personal Information
-            </button>
-        </h5>
-    </div>
-    <div id="collapseOne" class="card-body collapse show " aria-labelledby="headingOne" data-parent="#accordion">
-        <form>
-            <!-- Form Group (name)-->
-            <div class="mb-3">
-                <label class="small mb-1" for="name">Full Name</label>
-                <input class="form-control" name="name" id="name" type="text" placeholder="Enter your fullname" value=""
-                    required>
-            </div>
-            <!-- Form Group (reg No.)-->
-            <div class="mb-3">
-                <label class="small mb-1" for="registrationNo">Registration Number</label>
-                <input class="form-control" name="registrationNo" id="registrationNo" type="text"
-                    placeholder="Enter Registration No." value="" required>
-            </div>
+<div class="container">
 
-            <!-- Form Row-->
-            <div class="row gx-3 mb-3">
-                <!-- Form Group (first name)-->
-                <div class="col-md-6">
-                    <label class="small mb-1" for="admissionYear">Admission Year</label>
-                    <input class="form-control" id="admissionYear" class="admissionYear" type="text"
-                        placeholder="Enter Your Admission Year" value="">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h5 class="mb-10">
+                <button class="btn btn-link " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                    aria-controls="collapseOne">
+                    Personal Information
+                </button>
+            </h5>
+        </div>
+        <div id="collapseOne" class="card-body collapse show " aria-labelledby="headingOne" data-parent="#accordion">
+            <form>
+                <!-- Form Group (name)-->
+                <div class="mb-3">
+                    <label class="small mb-1" for="name">Full Name</label>
+                    <input class="form-control" name="name" id="name" type="text" placeholder="Enter your fullname"
+                        value="" required>
                 </div>
-                <!-- Form Group (last name)-->
-                <div class="col-md-6">
-                    <label class="small mb-1" for="admissionType">..</label>
-                    <select class="form-control" id="admissionType" name="admissionType">
-                        <option value="FE" selected>FE</option>
-                        <option value="Direct SE">Direct SE</option>
-                    </select>
+                <!-- Form Group (reg No.)-->
+                <div class="mb-3">
+                    <label class="small mb-1" for="registrationNo">Registration Number</label>
+                    <input class="form-control" name="registrationNo" id="registrationNo" type="text"
+                        placeholder="Enter Registration No." value="" required>
                 </div>
-            </div>
-            <!-- Form Row        -->
-            <div class="row gx-3 mb-3">
-                <!-- Form Group (organization name)-->
-                <div class="col-md-6">
-                    <label class="small mb-1" for="mob">Mobile No.</label>
-                    <input class="form-control" id="mob" type="tel" name="mob" placeholder="Enter your Mobile No."
+
+                <!-- Form Row-->
+                <div class="row gx-3 mb-3">
+                    <!-- Form Group (first name)-->
+                    <div class="col-md-6">
+                        <label class="small mb-1" for="admissionYear">Admission Year</label>
+                        <input class="form-control" id="admissionYear" class="admissionYear" type="text"
+                            placeholder="Enter Your Admission Year" value="">
+                    </div>
+                    <!-- Form Group (last name)-->
+                    <div class="col-md-6">
+                        <label class="small mb-1" for="admissionType">..</label>
+                        <select class="form-control" id="admissionType" name="admissionType">
+                            <option value="FE" selected>FE</option>
+                            <option value="Direct SE">Direct SE</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Form Row        -->
+                <div class="row gx-3 mb-3">
+                    <!-- Form Group (organization name)-->
+                    <div class="col-md-6">
+                        <label class="small mb-1" for="mob">Mobile No.</label>
+                        <input class="form-control" id="mob" type="tel" name="mob" placeholder="Enter your Mobile No."
+                            required>
+                    </div>
+                    <!-- Form Group (location)-->
+                    <div class="col-md-6">
+                        <label class="small mb-1" for="aadhar">Aadhar</label>
+                        <input class="form-control" id="aadhar" class="aadhar" type="number"
+                            placeholder="Enter Your Aadhar No" required>
+                    </div>
+                </div>
+                <!-- Form Group (email address)-->
+                <div class="mb-3">
+                    <label class="small mb-1" for="sigceEmail">SIGCE Email address</label>
+                    <input class="form-control" id="sigceEmail" class="sigceEmail" type="email"
+                        placeholder="Enter Your SIGCE Email" required>
+                </div>
+                <div class="mb-3">
+                    <label class="small mb-1" for="altEmail">Alternate Email address</label>
+                    <input class="form-control" id="altEmail" class="altEmail" type="email"
+                        placeholder="Enter Alternate Email">
+                </div>
+                <!-- Form Group (address)-->
+                <!-- Local Address -->
+                <div class="mb-3">
+                    <label class="small mb-1" for="localAddress">Local Address</label>
+                    <input class="form-control" id="localAddress" type="text" placeholder="Enter Your Local Address"
                         required>
                 </div>
-                <!-- Form Group (location)-->
-                <div class="col-md-6">
-                    <label class="small mb-1" for="aadhar">Aadhar</label>
-                    <input class="form-control" id="aadhar" class="aadhar" type="number"
-                        placeholder="Enter Your Aadhar No" required>
-                </div>
-            </div>
-            <!-- Form Group (email address)-->
-            <div class="mb-3">
-                <label class="small mb-1" for="sigceEmail">SIGCE Email address</label>
-                <input class="form-control" id="sigceEmail" class="sigceEmail" type="email"
-                    placeholder="Enter Your SIGCE Email" required>
-            </div>
-            <div class="mb-3">
-                <label class="small mb-1" for="altEmail">Alternate Email address</label>
-                <input class="form-control" id="altEmail" class="altEmail" type="email"
-                    placeholder="Enter Alternate Email">
-            </div>
-            <!-- Form Group (address)-->
-            <!-- Local Address -->
-            <div class="mb-3">
-                <label class="small mb-1" for="localAddress">Local Address</label>
-                <input class="form-control" id="localAddress" type="text" placeholder="Enter Your Local Address"
-                    required>
-            </div>
 
-            <!-- Permanent Address -->
-            <div class="mb-3">
-                <label class="small mb-1" for="permanentAddress">Permanent Address</label>
-                <input class="form-control" id="permanentAddress" type="text" placeholder="Enter Your Permanent Address"
-                    required>
-            </div><br>
-            <h5 class="text-primary">Parent Details:</h5>
-            <!-- Form Row-->
-            <div class="row gx-3 mb-3">
-                <!-- Form Group (phone number)-->
-                <div class="col-md-6">
-                    <label class="small mb-1" for="father">Father Name</label>
-                    <input class="form-control" id="father" class="father" type="text"
-                        placeholder="Enter Your Father Name" required>
-                </div>
-                <div class="col-md-6">
-                    <label class="small mb-1" for="mother">Mother Name</label>
-                    <input class="form-control" id="mother" class="mother" type="text"
-                        placeholder="Enter Your Mother Name" required>
-                </div>
-                <div class="col-md-6">
-                    <label class="small mb-1" for="fatherMob">Mobile No</label>
-                    <input class="form-control" id="fatherMob" class="fatherMob" type="tel"
-                        placeholder="Father's Mobile No" required>
-                </div>
-                <div class="col-md-6">
-                    <label class="small mb-1" for="motherMob">Mobile No</label>
-                    <input class="form-control" id="motherMob" class="fatherMob" type="tel"
-                        placeholder="Mother's Mobile No" required>
-                </div>
-                <div class="col-md-6">
-                    <label class="small mb-1" for="fatherOcc">Occupation</label>
-                    <input class="form-control" id="fatherOcc" class="fatherOcc" type="text"
-                        placeholder="Father's Occupation" required>
-                </div>
-                <div class="col-md-6">
-                    <label class="small mb-1" for="motherOcc">Occupation</label>
-                    <input class="form-control" id="motherOcc" class="motherOcc" type="text"
-                        placeholder="Mother's Occupation" required>
-                </div>
+                <!-- Permanent Address -->
+                <div class="mb-3">
+                    <label class="small mb-1" for="permanentAddress">Permanent Address</label>
+                    <input class="form-control" id="permanentAddress" type="text"
+                        placeholder="Enter Your Permanent Address" required>
+                </div><br>
+                <h5 class="text-primary">Parent Details:</h5>
+                <!-- Form Row-->
+                <div class="row gx-3 mb-3">
+                    <!-- Form Group (phone number)-->
+                    <div class="col-md-6">
+                        <label class="small mb-1" for="father">Father Name</label>
+                        <input class="form-control" id="father" class="father" type="text"
+                            placeholder="Enter Your Father Name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="small mb-1" for="mother">Mother Name</label>
+                        <input class="form-control" id="mother" class="mother" type="text"
+                            placeholder="Enter Your Mother Name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="small mb-1" for="fatherMob">Mobile No</label>
+                        <input class="form-control" id="fatherMob" class="fatherMob" type="tel"
+                            placeholder="Father's Mobile No" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="small mb-1" for="motherMob">Mobile No</label>
+                        <input class="form-control" id="motherMob" class="fatherMob" type="tel"
+                            placeholder="Mother's Mobile No" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="small mb-1" for="fatherOcc">Occupation</label>
+                        <input class="form-control" id="fatherOcc" class="fatherOcc" type="text"
+                            placeholder="Father's Occupation" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="small mb-1" for="motherOcc">Occupation</label>
+                        <input class="form-control" id="motherOcc" class="motherOcc" type="text"
+                            placeholder="Mother's Occupation" required>
+                    </div>
 
-            </div>
-            <!-- Save changes button-->
-            <button class="btn btn-primary" type="submit">Save changes</button>
-        </form>
+                </div>
+                <!-- Save changes button-->
+                <button class="btn btn-primary" type="submit">Save changes</button>
+            </form>
+        </div>
     </div>
-</div>
